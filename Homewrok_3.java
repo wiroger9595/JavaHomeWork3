@@ -81,19 +81,42 @@ public class Homewrok_3 {
 
 		//third/////////////////////////////////////////////////////
 		
-		
-		int availableNumber = (int)(Math.random()*51);
+					
+	    int allNum = 0;
+	    int []available = new int[49];
+	    for(int i = 1; i<50; i ++) {
+	    	
+	    	String vers = Integer.toString(i);
+	    
+	    	if(!vers.contains(StrUnWant)) {
+	    			
+		    		int intValue = Integer.valueOf(vers);
+		    		System.out.print(intValue + "\t");	
+		    		allNum++;
+		    		available[allNum] = intValue;
+		    		
+		    		if(allNum % 6 == 0) {
+	    			System.out.println();	
+	    			
+		    		}
+		    	}
 
-		System.out.println("don't show this number");
-		Scanner randomNumber = new Scanner(System.in);
+		}
+		System.out.println("there have " + allNum + " can choose");
 		
-		int hateNumber = randomNumber.nextInt();	
-		
-		
-		for(int i=0; i<50; i++) {
-//			if(Arrays.contains(i))) {
-//				
-//			}
+	    for(int v=0; v<6;v++) {
+	    	int w = (int)(Math.random() * 49);
+	    	int comChoose = available[w];
+	    	
+	    	if(comChoose == 0) {
+	    		v-= 1;
+	    	} else {
+
+	    		System.out.print(comChoose + "\t");
+
+	    		available[w] = 0;
+	    	}
+	    }
 			
 		}
 		
