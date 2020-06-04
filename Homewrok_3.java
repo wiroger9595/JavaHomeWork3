@@ -80,22 +80,20 @@ public class Homewrok_3 {
 		
 
 		//third/////////////////////////////////////////////////////
-		
-	    int availableNumber = (int)(Math.random()*51);
-		
-	while(true) {
-		System.out.println();
-		System.out.println("please enter number you don't like it:");
-		Scanner randomNumber = new Scanner(System.in);
-			
-		int unWantNumber = randomNumber.nextInt();
-			
-		String StrUnWant = Integer.toString(unWantNumber);
-		
-		
-		int allNum = 0;
-		int []available = new int[49];
-		for(int i = 1; i<50; i ++) {
+		int availableNumber = (int)(Math.random()*51);
+
+		while(true) {
+			System.out.println();
+			System.out.println("please enter number you don't like it:");
+			Scanner randomNumber = new Scanner(System.in);
+
+			int unWantNumber = randomNumber.nextInt();
+
+			String StrUnWant = Integer.toString(unWantNumber);
+					
+	    int allNum = 0;
+	    int []available = new int[49];
+	    for(int i = 1; i<50; i ++) {
 	    	
 	    	String vers = Integer.toString(i);
 	    
